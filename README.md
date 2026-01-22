@@ -1,16 +1,16 @@
 # Dév. d'assembly ARM sur x86
 
-Ce projet a été fait avec amour pour les élèves de l'université de Sherbooke qui ne veulent pas faire leurs devoirs d'IFT209 sur les ordinateurs de l'école. L'alternative demande d'installer l'ÉNORME image de machine virtuelle de 15gb qui est littéralement impossible à télécharger (j'ai essayé 2 fois et j'ai abandonné).
+Ce projet a été fait avec amour pour les élèves de l'université de Sherbooke qui ne veulent pas faire leurs devoirs d'IFT209 sur les ordinateurs de l'école ou d'installer l'ÉNORME image de machine virtuelle de 15gb qui est littéralement impossible à télécharger (j'ai essayé 2 fois et j'ai abandonné).
 
 Je vous prend donc par la main pour vous aider à configurer un environnement de développement assembly beaucoup plus légé et moderne que la solution proposée en cours.
 
 ## Prérequis
 
-Ce projet dépend des DevContainers pour effectuer ce qu'il a à faire. Vous aurez besoin des composantes suivantes pour l'exécuter correctement:
+Ce projet dépend des DevContainers. Vous aurez besoin des composantes suivantes pour l'exécuter correctement:
 
 - *Visual Studio Code*
-- WSL 2
-- Virtualisation activée
+- WSL
+- Virtualisation activée (dans le bios)
 
 > **Attention !**  
 (À vérifier) mais si vous utilisez Docker Desktop pour Windows, vous pourrez directement passer à l'étape [Utiliser le Dev Container](#utiliser-le-dev-container).
@@ -44,7 +44,7 @@ wsl --install
 
 ## Configurer WSL pour exécuter ARM
 
-2. Dans *Visual Studio Code*, Appuyez sur `f1` et entrez `WSL: Connect to WSL`. L'IDE devrait se recharger et vous verrez en bas à gauche de l'application un ruban bleu libelé avec le nom de votre distribution.
+2. Dans *Visual Studio Code*, Appuyez sur `f1` et entrez `WSL: Connect to WSL`. L'IDE devrait se recharger et vous verrez en bas à gauche de l'application un ruban bleu libellé avec le nom de votre distribution.
 
 3. Ouvrez un terminal et installez qemu avec la ligne suivante:
 ```bash
@@ -61,6 +61,16 @@ Ce paquet fait le pont entre l'architechture ARM et X86. Il est nécéssaire.
 
 La page va se recharger et vous verrez plusieurs lignes défiler sur un terminal inférieur.
 
+Au premier lancement, Docker téléchargera les fichiers nécéssaires pour l'exécution de l'environnement de développement ARM. Ça prendra quelques minutes. Vous verrez apparaître vos fichiers dans l'explorateur à gauche lorsque le processus sera fini. Le libellé du ruban bleu en bas à gauche devrait aussi indiquer `armdevenv`.
+
+3. Ouvrez un nouveau terminal, compilez votre programme avec les commandes vues en classe et exécutez le comme si vous utilisiez une vraie machine ARM !
+
+L'image que du DevContainer vient préinstallée avec tous les meilleurs outils pour la compilation de code assembleur:
+- `gcc`
+- `make` 
+- `ld`
+- `as`
+
 ## Erreurs potentielles
 ### Aucune distribution de linux n'a été installée dans WSL / `wsl --install` ne fonctionne pas:
 1. Redémarrez l'ordinateur.  
@@ -73,5 +83,5 @@ La page va se recharger et vous verrez plusieurs lignes défiler sur un terminal
 1. Assurez-vous d'avoir bien suivi les instructions sous [Configurer WSL pour exécuter ARM](#configurer-wsl-pour-exécuter-arm).
 
 ### Je n'utilise pas Visual Studio Code
-
+Ougabouga
 ![Singe qui frappe une planche avec un marteau.](https://media1.tenor.com/m/NazUtPacRpIAAAAd/monke-orangutan.gif)
