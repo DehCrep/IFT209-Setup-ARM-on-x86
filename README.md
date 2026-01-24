@@ -7,7 +7,7 @@ Je vous prend donc par la main pour vous aider à configurer un environnement de
 ## Prérequis
 
 > **Utilisateurs de Linux**  
-La configuration de votre machine est beaucoup plus facile. Passez directement à l'étape [Configurer la couche d'émulation](#configurer-la-couche-démulation) # 2.
+La configuration de votre machine est beaucoup plus facile. Installez d'abord [Docker Engine](https://docs.docker.com/engine/install) et passez directement à l'étape [Configurer la couche d'émulation](#configurer-la-couche-démulation) # 2.
 
 > **Docker Desktop**  
 (À vérifier) Si vous utilisez Docker Desktop pour Windows, vous pourrez directement passer à l'étape [Utiliser le Dev Container](#utiliser-le-dev-container).
