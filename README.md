@@ -9,14 +9,14 @@ Je vous prend donc par la main pour vous aider à configurer un environnement de
 > **Utilisateurs de Linux**  
 La configuration de votre machine est beaucoup plus facile. Passez directement à l'étape [Configurer la couche d'émulation](#configurer-la-couche-démulation) # 2.
 
-Ce projet dépend des DevContainers. Vous aurez besoin des composantes suivantes pour l'exécuter correctement:
+> **Docker Desktop**  
+(À vérifier) Si vous utilisez Docker Desktop pour Windows, vous pourrez directement passer à l'étape [Utiliser le Dev Container](#utiliser-le-dev-container).
+
+Ce projet dépend des DevContainers. Vous aurez besoin des composantes suivantes pour l'exécuter correctement (sur Windows):
 
 - *Visual Studio Code*
 - WSL
 - Virtualisation activée (dans le bios)
-
-> **Attention !**  
-(À vérifier) mais si vous utilisez Docker Desktop pour Windows, vous pourrez directement passer à l'étape [Utiliser le Dev Container](#utiliser-le-dev-container).
 
 ## Configurer *Visual Studio Code*
 1. Installez les extensions suivantes:
@@ -61,7 +61,7 @@ sudo systemctl enable qemu-binfmt
 sudo systemctl start qemu-binfmt
 ```
 
-- **Alternativement,**  si vous ne voulez pas bisouiller avec les services, ne faites qu'exécuter la ligne suivante à chaque lancements:
+- **Alternativement,**  si vous ne voulez pas bisouiller avec les services, ne faites qu'exécuter la ligne suivante à chaque lancement:
     ```bash
     docker run --privileged --rm tonistiigi/binfmt --install arm64
     ```
