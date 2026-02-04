@@ -14,7 +14,8 @@
             "settings": {
                 "files.associations": {
                     "*.as": "asm"
-                }
+                },
+                "debug.allowBreakpointsEverywhere": true
             }
         }
     }
