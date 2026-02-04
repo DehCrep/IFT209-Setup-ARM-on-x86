@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug ARM64 via QEMU",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}${pathSeparator}${fileBasenameNoExtension}",
+            "cwd": "${fileDirname}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb-multiarch",
+            "miDebuggerServerAddress": "localhost:1234",
+            "stopAtEntry": true,
+            "preLaunchTask": "arm-debug",
+            "setupCommands": [
+                {
+                    "description": "Set ARM architecture",
+                    "text": "set architecture aarch64",
+                    "ignoreFailures": false
+                },
+                {
+                    "description": "Set breakpoint pending on",
+                    "text": "set breakpoint pending on",
+                    "ignoreFailures": false
+                }
+            ]
+        }
+    ]
+}

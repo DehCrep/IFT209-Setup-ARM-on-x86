@@ -1,10 +1,26 @@
-# Image de base qui contient tous les outils de compilation que nous voulons pour ARM.
-FROM gcc
-#FROM arm64v8/ubuntu
+# Se baser sur la dernière version LTS d'ubuntu
+FROM ubuntu
 
-# Ce qui se situe dans le dossier .devcontainer/tools est copié dans le container sous /root/.../tools
+# Copier le dossier .devcontainer/tools dans le container sous /root/.../tools
 COPY ./tools /root/SOURCES/ift209/tools
 
-# Installer le GNU Debugger
-RUN apt update && apt install -y \
-    gdb
+# Installer tous les paquets nécéssaires pour la cross-compilation
+RUN apt-get update && \
+apt-get install -y \
+gcc-aarch64-linux-gnu \
+binutils-aarch64-linux-gnu \
+binutils-aarch64-linux-gnu-dbg \
+qemu-user \
+qemu-user-static \
+binfmt-support \
+gdb-multiarch \
+make
+
+# des alias pour binder les outils de cross-compilation aux noms natifs (make files du prof)
+RUN ln -s /usr/bin/aarch64-linux-gnu-as /usr/bin/as
+RUN ln -s /usr/bin/aarch64-linux-gnu-ld /usr/bin/ld
+RUN ln -s /usr/bin/aarch64-linux-gnu-gcc /usr/bin/gcc
+
+# Copier le contenu de extra.bashrc dans le bashrc
+COPY ./extra.bashrc /extra.bashrc
+RUN cat /extra.bashrc >> ~/.bashrc && rm /extra.bashrc
