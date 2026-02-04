@@ -1,10 +1,22 @@
 {
     "name": "armdevenv",
     "build": {
-        "dockerfile": "Dockerfile",
-        "options": [
-            "--platform=linux/arm64"
-        ]
+        "dockerfile": "Dockerfile"
     },
-    "overrideCommand": true
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "dan-c-underwood.arm",
+                "ms-vscode.makefile-tools"
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.as": "asm"
+                },
+                "debug.allowBreakpointsEverywhere": true
+            }
+        }
+    }
 }
