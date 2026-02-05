@@ -8,15 +8,14 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools",
-                "ms-vscode.makefile-tools",
-                "Arm.armls"
+                "dan-c-underwood.arm",
+                "ms-vscode.makefile-tools"
             ],
             "settings": {
                 "files.associations": {
-                    "*.as": "arm.aarch64-assembly"
+                    "*.as": "asm"
                 },
-                "debug.allowBreakpointsEverywhere": true,
-                "task.problemMatchers.neverPrompt": true
+                "debug.allowBreakpointsEverywhere": true
             }
         }
     }
