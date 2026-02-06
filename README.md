@@ -116,9 +116,7 @@ Le débogage visuel trivialise le processus de lancement de l'application et le 
 
 4. Ajoutez des points d'arrêts directement dans votre fichier source (au `Main`, par exemple), et utilisez les contrôles d'avancement du panneau de contrôle de déboguage qui s'est ouvert dans le milieu haut droit de l'interface de Visual Studio Code pour avancer dans votre code.
 
-    *Si votre fichier n'a pas de coloration syntaxique ou si vous n'arrivez pas à émettre un break point, renommez temporairement son extension à `.S`. Essayez aussi d'activer manuellement le paramètre `allowBreakpointsEverywhere` dans les paramètres de Visual Studio Code. Lancer un débogage peut aider à débloquer les breakpoints! Assurez-vous que vous compilez aussi avec l'argument `--gstabs`.* 
-    
-    > **Attention!** Vous ne pourrez qu'utiliser les breakpoints sur le fichier source qui a le même nom que l'exécutable. Utilisez gdb sans visuel ou mettez des breakpoints dans le code désassemblé directement.
+    > **Attention!** Vous ne pourrez qu'utiliser les breakpoints sur le fichier source qui a le même nom que l'exécutable. Utilisez gdb sans visuel ou mettez des breakpoints dans le code désassemblé directement. Assurez-vous que vous compilez avec l'argument `--gstabs`.
 
 5. Vous pouvez consulter vos registres dans le panneau de gauche.
 
