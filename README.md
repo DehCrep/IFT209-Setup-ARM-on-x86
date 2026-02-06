@@ -72,7 +72,7 @@ ar ./prog
 
 ## Débogage
 
-Il est présentement impossible de déboger directement un programme qui s'exécute s'émule avec QEMU. Il faut utiliser une formule un peu plus sofistiquée mais tout de même intuitive du serveur et client de débogage.
+QEMU ne supporte pas le débogage avec gdb nativement, mais il permet l'utilisation de la fonctionnalité de serveur de débogage:
 
 
 1. Dans un premier terminal, lancez d'abord votre programme avec la fonction `arm-debug [file]` ou son alias `adb [file]`.
