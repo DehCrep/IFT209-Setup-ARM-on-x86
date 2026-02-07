@@ -10,7 +10,7 @@ arm-debug () {
 
 # Pour lancer le débogeur ARM.
 arm-debugger () {
-    gdb-multiarch -q --nh -ex 'set architecture aarch64' -ex "file ${1}" -ex "$DB_HOST:$DB_PORT"
+    gdb-multiarch -q --nh -ex 'set architecture aarch64' -ex "file ${1}" -ex "target remote $DB_HOST:$DB_PORT"
 }
 
 # Des petits alias pour simplifier l'appel des fonctions déclarées ci-haut...
