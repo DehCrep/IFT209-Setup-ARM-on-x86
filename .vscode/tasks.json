@@ -4,9 +4,8 @@
         {
             "label": "(QEMU + gdbstub) debug current file",
             "type": "shell",
-            "dependsOn":[ "Log Ready to QEMU output" ],
             // Print 'ping' and 'pong' to trigger background command lifecycle.
-            "command": "echo ping; echo pong; clear; qemu-aarch64 -L /usr/aarch64-linux-gnu/ -g ${env:DB_PORT} ${fileDirname}${pathSeparator}${fileBasenameNoExtension}",
+            "command": "echo ping; echo pong; clear; qemu-aarch64 -L /usr/aarch64-linux-gnu/ -g ${env:DB_PORT} '${fileDirname}${pathSeparator}${fileBasenameNoExtension}'",
             "isBackground": true,
             "presentation": {
                 // Disabled because cleared anyway.
