@@ -11,7 +11,6 @@
             "miDebuggerPath": "/usr/bin/gdb-multiarch",
             "miDebuggerServerAddress": "${env:DB_HOST}:${env:DB_PORT}",
             "preLaunchTask": "(QEMU + gdbstub) debug current file",
-            "stopAtEntry": true,
             "setupCommands": [
                 {
                     "description": "Set breakpoint pending on",
@@ -30,7 +29,6 @@
             "miDebuggerPath": "/usr/bin/gdb-multiarch",
             "miDebuggerServerAddress": "${env:DB_HOST}:${env:DB_PORT}",
             "preLaunchTask": "(QEMU + gdbstub) debug selected file",
-            "stopAtEntry": true,
             "setupCommands": [
                 {
                     "description": "Set breakpoint pending on",
