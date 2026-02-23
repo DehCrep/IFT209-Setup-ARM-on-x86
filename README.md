@@ -127,8 +127,6 @@ Le débogage visuel réduit en un simple clic le processus de lancement et d'ana
         |**arm-debugger argument**|Le nom de l'exécutable relatif au fichier actuellement ouvert. (ex: `prog`)|
         |**arm-debug argument**|Le nom de l'exécutable relatif au fichier actuellement ouvert. *Vous pouvez y ajouter des arguments ainsi que lui fournir une redirection d'entrées. (ex: `prog < tests/input_file`)*|
 
-    > **Attention :** Le programme commencera toujours son exécution hors de votre fichier. C'est un caprice de l'émulation QEMU (je pense). Vous verrez un nouveau fichier inexistant s'ouvrir. Vous pouvez le fermer et rouvrir le fichier source de l'exécutable courant.
-
 ### Ajouter des points d'arrêt
 Ajoutez des points d'arrêts directement dans votre fichier source (au `Main`, par exemple) et utilisez [la barre d'outils de débogage](https://code.visualstudio.com/docs/debugtest/debugging#_debug-actions) pour contrôler l'exécution de votre programme.
 
