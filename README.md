@@ -24,7 +24,7 @@ Le Dev Container de ce projet est configuré spécifiquement pour permettre le d
 2. Ouvrez votre dossier de travail avec *Visual Studio Code*. Celui-ci devrait vous proposer de rouvrir le dossier dans le DevContainer. Faites-le!
 *Vous pouvez forcer Visual Studio Code à lancer le Dev Container en appuyant sur `f1` et en sélectionnant `Dev Containers: Reopen in Container`.*
 
-> **Remarque:** Au premier lancement, Docker téléchargera les fichiers nécéssaires pour l'exécution de l'environnement de développement. Ça prendra quelques minutes. Vous verrez apparaître vos fichiers dans l'explorateur à gauche lorsque le processus sera fini. Le libellé du ruban bleu en bas à gauche devrait aussi indiquer `armdevenv`.
+> **Remarque:** Au premier lancement, Docker téléchargera les fichiers nécéssaires pour l'exécution de l'environnement de développement. Vous verrez apparaître vos fichiers dans l'explorateur à gauche lorsque le processus sera fini. Le libellé du ruban bleu en bas à gauche devrait aussi indiquer `armdevenv`.
 
 La page va se recharger et vous verrez plusieurs lignes défiler dans un terminal au bas de l'écran.
 
