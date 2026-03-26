@@ -37,6 +37,7 @@ Des alias ont été créés pour faciliter les tâches principales de l'environn
 |`as`|`aarch64-linux-gnu-as`|
 |`ld`|`aarch64-linux-gnu-ld`|
 |`gcc`|`aarch64-linux-gnu-gcc`|
+|`g++`|`aarch64-linux-gnu-g++`|
 |`ar`|`arm-run`|
 |`adb`|`arm-debug`|
 |`adbg`|`arm-debugger`|
@@ -58,20 +59,17 @@ Le container vient préinstallé avec des outils de cross-compilation. Il est au
 |`as`|`aarch64-linux-gnu-as`|
 |`ld`|`aarch64-linux-gnu-ld`|
 |`gcc`|`aarch64-linux-gnu-gcc`|
+|`g++`|`aarch64-linux-gnu-g++`|
 
 *Exemple d'utilisation:*
 ```bash
-#aarch64-linux-gnu-as --gstabs ./prog.as -o ./prog.o
+#aarch64-linux-gnu-as --g ./prog.as -o ./prog.o
 # même chose que:
 as -g ./prog.as -o ./prog.o
 
 #aarch64-linux-gnu-ld -e Main ./prog.o  -o ./prog -lc
 # même chose que:
 ld -e Main ./prog.o  -o ./prog -lc
-
-#aarch64-linux-gnu-gcc ...
-# même chose que:
-gcc ...
 ```
 
 Vous pouvez compiler les projets qui ont un makefile sans soucis, puisque `make` prend aussi en compte les alias.
@@ -132,6 +130,8 @@ Ajoutez des points d'arrêts directement dans votre fichier source (au `Main`, p
 
 ### Consultation des registres
 Lorsque l'exécution est en pause, les registres et leurs valeurs sont disponibles dans [le panneau de gauche](https://code.visualstudio.com/docs/debugtest/debugging#_data-inspection).
+
+Vous pouvez ajouter un registre à l'onglet *WATCH* en y préfixant le symbole `$` comme suit : `x0`, `$x19`, `$w19`.
 
 ### Désassemblage du code
 Vous pouvez consulter le code désassemblé de l'application en faisant un clic droit sur sur n'importe quel élément du call stack (dans le panneau de gauche) et en sélectionnant `Open Disassembly View`. *Vous pouvez même directement ajouter des breakpoints dans le code désassemblé!*
