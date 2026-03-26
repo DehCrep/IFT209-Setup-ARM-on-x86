@@ -1,8 +1,6 @@
 {
     "name": "armdevenv",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "ghcr.io/dehcrep/armdevenv:latest",
     "overrideCommand": true,
     "customizations": {
         "vscode": {
