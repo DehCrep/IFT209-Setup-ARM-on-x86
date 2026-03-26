@@ -5,6 +5,7 @@ FROM ubuntu
 RUN apt-get update && \
 apt-get install -y \
 gcc-aarch64-linux-gnu \
+g++-aarch64-linux-gnu \
 binutils-aarch64-linux-gnu \
 binutils-aarch64-linux-gnu-dbg \
 qemu-user \
@@ -24,6 +25,7 @@ ENV DB_PORT=1234
 RUN ln -s /usr/bin/aarch64-linux-gnu-as /usr/bin/as
 RUN ln -s /usr/bin/aarch64-linux-gnu-ld /usr/bin/ld
 RUN ln -s /usr/bin/aarch64-linux-gnu-gcc /usr/bin/gcc
+RUN ln -s /usr/bin/aarch64-linux-gnu-g++ /usr/bin/g++
 
 # Copier le contenu de extra.bashrc dans le bashrc
 COPY ./extra.bashrc /extra.bashrc
