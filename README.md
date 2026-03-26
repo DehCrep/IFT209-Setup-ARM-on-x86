@@ -1,8 +1,8 @@
-# Développement ASM ARM sur x86
+# IFT209 Dev Container
 
 ![Visual Studio Code en plein débogage ASM ARM.](images/debug-preview.png)
 
-Ce projet a été fait avec amour pour les élèves de l'Université de Sherbooke en tant qu'alternative plus légère et portable que la solution de développement offerte en classe.
+Ce projet a été fait avec amour pour les élèves de l'UdeS en tant qu'alternative plus légère et portable que la solution de développement offerte pour le cours d'ift209.
 
 ## Pré-requis
 
